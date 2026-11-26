@@ -1,0 +1,11 @@
+{
+  "name": "antigravity-swarm-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free TaskPulse API and dashboard for the Antigravity 2.0 workshop",
+  "scripts": {
+    "start": "node app/backend/server.js",
+    "test": "node --test tests/*.test.js",
+    "test:hooks": "python3 -m unittest discover -s tests -p 'test_*.py'"
+  }
+}

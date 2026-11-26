@@ -1,0 +1,23 @@
+{
+  "context": {
+    "maxTokens": 512000,
+    "compactWhenAbove": 0.8
+  },
+  "permissions": {
+    "allow": ["read", "search", "test"],
+    "requireApproval": ["write", "shell"],
+    "protectedPaths": [".env*"]
+  },
+  "hooks": {
+    "PreToolUse": "python3 .antigravity/hooks/pre_tool_guard.py",
+    "PostToolUse": "python3 .antigravity/hooks/post_tool_audit.py"
+  },
+  "swarm": {
+    "agents": [
+      ".antigravity/agents/architect.md",
+      ".antigravity/agents/developer.md",
+      ".antigravity/agents/qa_tester.md"
+    ],
+    "sharedBoard": true
+  }
+}

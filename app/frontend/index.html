@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TaskPulse | Workshop Antigravity</title>
+    <style>
+      :root { color-scheme: light; font-family: system-ui, sans-serif; background: #f3f5f9; color: #172033; }
+      body { margin: 0; padding: 2rem 1rem; }
+      main { max-width: 720px; margin: auto; }
+      header, form, li { display: flex; align-items: center; gap: 1rem; }
+      header { justify-content: space-between; }
+      form { margin: 1.5rem 0; }
+      input { flex: 1; min-width: 0; padding: .8rem; }
+      button { padding: .8rem 1rem; border: 0; border-radius: .5rem; background: #3559d7; color: white; cursor: pointer; }
+      ul { padding: 0; list-style: none; }
+      li { justify-content: space-between; padding: 1rem; margin: .5rem 0; background: white; border-radius: .5rem; }
+      .completed { color: #687386; text-decoration: line-through; }
+      .error { color: #a32121; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>TaskPulse</h1>
+          <p>Tablero de tareas del workshop</p>
+        </div>
+        <button id="refresh" type="button">Actualizar tareas ahora</button>
+      </header>
+      <form id="task-form">
+        <input id="task-title" name="title" placeholder="Nueva tarea" required>
+        <button type="submit">Agregar</button>
+      </form>
+      <p id="message" aria-live="polite"></p>
+      <ul id="tasks"></ul>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
